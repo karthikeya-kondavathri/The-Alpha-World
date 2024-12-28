@@ -19,7 +19,7 @@ b,strong,th{font-weight:bold;}
     
     --txt-color: black;
 
-    --para-text: 15px;
+    --para-text: 14px;
     --head1-text: 28px;
     --head2-text: 22px;
     --head3-text: 20px;
@@ -27,12 +27,12 @@ b,strong,th{font-weight:bold;}
 /* var() function used here */
 
 h1 {
-    font-size: var(--head1-text);
+    font-size: var(--head2-text);
     color: #000000;
 }
 
 h2 {
-    font-size: var(--head2-text);
+    font-size: var(--head3-text);
     color: #000000;
 }
 
@@ -40,7 +40,8 @@ h2 {
 body{
 	font-family: "Inter", sans-serif;
 	font-style: normal;
-	color: #8c918c;
+	color: rgb(43, 45, 59);
+	background: rgb(247, 249, 251);
 }
 
 a{
@@ -81,14 +82,19 @@ input, select{
 	justify-content: flex-end;
 }
 
+.mb-40{
+	margin-bottom: 40px!important;
+}
+
 .primaryBtns, .popup .primaryBtns{
 	background: #3C80FF;
 	color: #fff;
 	font-size: 16px;
 	font-weight: 600;
+	line-height: 20px;
 	width: 100%;
-	padding: 15px;
-	border-radius: 10px;
+	padding: 12px;
+	border-radius:6px;
 	--webkit--transition: all ease-in-out .15s;
 	--moz--transition: all ease-in-out .15s;
 	--ms--transition: all ease-in-out .15s;
@@ -101,7 +107,7 @@ input, select{
 }
 
 .mainLoginWrapper{
-	background: url(../images/loginBG.jpg) -200px center;
+	background: url(../images/loginBG.jpg) center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -141,7 +147,7 @@ input, select{
 .loginRS{
 	height: 100vh;
 	width: 50%;
-	background: #4059FF;
+	/*background: #4059FF;*/
 	position: relative;
 	z-index: 1;
 }
@@ -149,7 +155,7 @@ input, select{
 .loginForm{
 	background: #fff;
 	width: 450px;
-	padding: 50px;
+	padding:40px;
 	border-radius: 10px;
 	text-align: center;
 }
@@ -161,10 +167,11 @@ input, select{
 
 .ipTextArea,
 .ip{
-	font-size: 14px;
+	font-size: 13px;
+	line-height: 20px;
 	margin-bottom: 20px;
-	padding: 15px;
-	border-radius: 10px;
+	padding:9px 12px;
+	border-radius: 6px;
 	background: #fff;
 	border: solid 1px #d9d9d9;
 	--webkit--transition: all ease-in-out .15s;
@@ -204,16 +211,16 @@ input, select{
 }
 
 .pageTitle{
-	font-size: var(--head1-text);
+	font-size: var(--head3-text);
 	font-weight: 600;
-	padding: 25px 20px 25px 0;
+	padding: 8px 0 0;
 }
 
-.regstrationForm{
+/*.regstrationForm{
 	border: solid 1px #d9d9d9;
     border-radius: 10px;
     padding: 30px 25px;
-}
+}*/
 
 .regstrationFormWrapper{
 	width: 90%;
@@ -222,9 +229,16 @@ input, select{
 	
 }
 
+.pagecard{
+	box-shadow: 0 3px 16px rgba(142,134,171,.05);
+	background: #fff;
+	border-radius: 6px;
+	padding: 24px;
+}
+
 .regstrationFormWrapper .pageTitle{
-	border-bottom: solid 2px #d9d9d98a;
-	margin-bottom: 45px;
+	/*border-bottom: solid 2px #d9d9d98a;*/
+	margin-bottom: 24px;
 }
 
 .regstrationForm .grid{
@@ -241,7 +255,7 @@ input, select{
 }
 
 label[for="file-upload"], label[for="file-download"] {
-  padding: 0.5em;
+  padding-left: 10px;
   display: inline-block;
   cursor: pointer;
 }
@@ -249,7 +263,6 @@ label[for="file-upload"]:hover {
 }
 
 #filename {
-  padding: 0.5em;
   float: left;
   white-space: nowrap;
   overflow: hidden;
@@ -257,18 +270,20 @@ label[for="file-upload"]:hover {
 
 .fileUpload{
 	width: 49%;
-	font-size: 14px;
-    margin-bottom: 25px;
-    padding: 9px;
-    border-radius: 10px;
+	font-size: 13px;
+	line-height: 20px;
+    margin-bottom: 20px;
+    padding:9px 12px;
+    border-radius: 6px;
     background: #fff;
     border: solid 1px #d9d9d9;
-    color: #8c918c;
+    color: rgb(140, 145, 140);
 }
 
 .formSubmit{
 	max-width: 250px;
 	margin: auto;
+	padding: 12px 0;
 }
 
 /*navigation code*/
@@ -359,23 +374,34 @@ nav ul li ul li a {
   width: 70px;
 }
 /*Table code start*/
-table {
+table.primaryTable {
   border-collapse: collapse;
   width: 100%;
 }
 
-th, td {
+table.primaryTable th, 
+table.primaryTable td {
+	box-sizing: border-box;
   text-align: left;
-  padding: 10px 8px;
-  border: 1px solid #000000;
-  font-size:14px;
+  padding: 14px 10px;
+  font-size:13px;
+  line-height: 20px;
   color: #0c0c0c;
 }
-th{
-	color: #000000;
-	background: rgb(231 231 231);
+table.primaryTable th{
+	color: rgb(43, 45, 59);
+	background: rgb(244, 246, 249);
+	font-weight: 600;	
 }
-th a, td a {
+table.primaryTable tr{
+	border-bottom: 1px dashed rgb(226, 231, 241);
+}
+table.primaryTable tr:first-child,
+table.primaryTable tr:last-child{
+	border-bottom: 0;
+}
+table.primaryTable th a, 
+table.primaryTable td a {
   color: #00489b;
   font-weight: 500;
 }
@@ -475,9 +501,10 @@ th a, td a {
 }
 .cardsection .cards{
 	flex: 1;
-	background:#ededed;
-	padding:20px;
-	border-radius: 5px;
+	background:rgb(255, 255, 255);
+	padding:24px;
+	border-radius: 6px;
+	box-shadow: 0 3px 16px rgba(142,134,171,.05);
 	text-align: center;
 	display: flex;
 	justify-content: space-between;
@@ -486,11 +513,12 @@ th a, td a {
 .cardsection .cards span{
 	font-size:var(--para-text);
 	line-height: 20px;
-	color: #000;
+	color: rgb(43, 45, 59);
+	text-transform: capitalize;
 }
 .cardsection .cards h3{
-	font-size:var(--head1-text);
-	color: #00489b;
+	font-size:var(--head2-text);
+	color: /*#00489b;*/ rgb(74, 80, 92);
 	margin: 10px;
 	font-weight: 600;
 }
